@@ -27,3 +27,9 @@ let dcHeroes=["Superman","Badman"];
 let heroes=marvelHeroes.concat(dcHeroes);
 console.log(heroes);
 console.log(marvelHeroes.splice(1,4));
+console.log(marvelHeroes.slice(1,3));
+
+let arry=[1,2,3,4,5,6,7,8];
+console.log(arry.splice(2,2,101,102));//to delete 3 and 4
+console.log(arry.splice(2,0,101,102));// to add
+console.log(arry.splice(3,1,101));//to replace

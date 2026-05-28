@@ -4,12 +4,14 @@
 //  console.log(i);
 //  i++;
 // }while (i<=10)
+
 //while loop
 // while (i<=10)
 // {
 //     console.log(i);
 //     i++;
 // }
+  
 //for loop
 for(let i=0;i<=10;i++)
 {

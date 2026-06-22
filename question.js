@@ -79,15 +79,30 @@
 // }
 
 //Palindrome  number
-for(i=0;i<=1000;i++){
-    num=i;
-    reverse=0;
-    while(num>0){
-        let digit=num%10;
-        reverse=reverse*10+digit;
-        num=Math.floor(num/10);
-    }
-    if(reverse==i){
-        console.log(i);
-    }
+// for(i=0;i<=1000;i++){
+//     num=i;
+//     reverse=0;
+//     while(num>0){
+//         let digit=num%10;
+//         reverse=reverse*10+digit;
+//         num=Math.floor(num/10);
+//     }
+//     if(reverse==i){
+//         console.log(i);
+//     }
+// }
+
+
+// Standard Function
+function add(a, b) {
+  return a + b;
 }
+let sum= add(5,6);
+console.log(sum)
+
+// Function Expression
+const multiply = function(a, b) {
+  return a * b;
+};
+let mul=multiply(5,6);
+console.log(mul);

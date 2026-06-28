@@ -94,42 +94,60 @@
 
 
 // Standard Function
-function add(a, b) {
-  return a + b;
+// function add(a, b) {
+//   return a + b;
+// }
+// let sum= add(5,6);
+// console.log(sum)
+
+// // Function Expression
+// const multiply = function(a, b) {
+//   return a * b;
+// };
+// let mul=multiply(5,6);
+// console.log(mul);
+
+
+// let num = parseInt(inp); // Don't change this line
+
+// // Type your code below
+// console.log("Welcome to FizzBuzz!");
+// function fizzbuzz(num){
+//     if(num%3===0 && num%7===0){
+//         return "FizzBuzz";
+//     }
+//     else if(num%3===0){
+//         return "Fizz";
+//     }
+//     else if (String(num).includes("3")) {
+//         return "Almost Fizz";
+//     }
+//     else if(num%7===0){
+//         return "Buzz";
+//     }
+
+//     else{
+//         return num;
+//     }
+// }
+// for(let i=1;i<=num;i++){
+//     console.log(fizzbuzz(i));
+// }
+
+
+
+let userName=String(prompt("Enter the username: "));
+
+let passWord=prompt("Enter the passwrd: ");
+const access=(userName,passWord)=>{
+  if(userName.toLowerCase()==="admin"){
+    return "you got access admin.";
+  }
+  else if(userName.toLowerCase()==="user" && passWord==="user"){
+    return "you got access user.";
+  }
+  else{
+    return "access denied "+ userName;
+  }
 }
-let sum= add(5,6);
-console.log(sum)
-
-// Function Expression
-const multiply = function(a, b) {
-  return a * b;
-};
-let mul=multiply(5,6);
-console.log(mul);
-
-
-let num = parseInt(inp); // Don't change this line
-
-// Type your code below
-console.log("Welcome to FizzBuzz!");
-function fizzbuzz(num){
-    if(num%3===0 && num%7===0){
-        return "FizzBuzz";
-    }
-    else if(num%3===0){
-        return "Fizz";
-    }
-    else if (String(num).includes("3")) {
-        return "Almost Fizz";
-    }
-    else if(num%7===0){
-        return "Buzz";
-    }
-
-    else{
-        return num;
-    }
-}
-for(let i=1;i<=num;i++){
-    console.log(fizzbuzz(i));
-}
+console.log(access(userName,passWord));

@@ -106,3 +106,30 @@ const multiply = function(a, b) {
 };
 let mul=multiply(5,6);
 console.log(mul);
+
+
+let num = parseInt(inp); // Don't change this line
+
+// Type your code below
+console.log("Welcome to FizzBuzz!");
+function fizzbuzz(num){
+    if(num%3===0 && num%7===0){
+        return "FizzBuzz";
+    }
+    else if(num%3===0){
+        return "Fizz";
+    }
+    else if (String(num).includes("3")) {
+        return "Almost Fizz";
+    }
+    else if(num%7===0){
+        return "Buzz";
+    }
+
+    else{
+        return num;
+    }
+}
+for(let i=1;i<=num;i++){
+    console.log(fizzbuzz(i));
+}

@@ -136,18 +136,49 @@
 
 
 
-let userName=String(prompt("Enter the username: "));
+// let userName=String(prompt("Enter the username: "));
 
-let passWord=prompt("Enter the passwrd: ");
-const access=(userName,passWord)=>{
-  if(userName.toLowerCase()==="admin"){
-    return "you got access admin.";
-  }
-  else if(userName.toLowerCase()==="user" && passWord==="user"){
-    return "you got access user.";
-  }
-  else{
-    return "access denied "+ userName;
+// let passWord=prompt("Enter the passwrd: ");
+// const access=(userName,passWord)=>{
+//   if(userName.toLowerCase()==="admin"){
+//     return "you got access admin.";
+//   }
+//   else if(userName.toLowerCase()==="user" && passWord==="user"){
+//     return "you got access user.";
+//   }
+//   else{
+//     return "access denied "+ userName;
+//   }
+// }
+// console.log(access(userName,passWord));
+
+
+const removeDuplicates=(arr)=>{
+  let unique=[];
+  for(let i=1;i<=arr.length;i++){
+    found=false;
+    for(let j=1;j<=unique.length;j++){
+      if(arr[i]===unique[j]){
+        found=true;
+        break;
+      }
+    }
+      if(found===false){
+    unique.push(arr[i]);
   }
 }
-console.log(access(userName,passWord));
+return unique;
+}
+  
+console.log( removeDuplicates([1,2,2,3,4,5,5,6,6,7,7,8,8,9,9,9,9,9,10]));
+
+
+const reverseArray=(arr)=>{
+  let reversed=[];
+  for(let i=arr.length-1;i>=0;i--){
+    reversed.push(arr[i]);
+  }
+  return reversed; 
+}
+let re=reverseArray([1,2,9,8,5,6])
+console.log(re);

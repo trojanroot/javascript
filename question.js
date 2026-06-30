@@ -182,3 +182,38 @@ const reverseArray=(arr)=>{
 }
 let re=reverseArray([1,2,9,8,5,6])
 console.log(re);
+
+let numbers = [40, 10, 30, 20, 50, 30, 10];
+numbers.sort();
+numbers.reverse();
+console.log(numbers)
+let firstIndex=numbers.indexOf(30);
+console.log(firstIndex);
+let lastIndex=numbers.lastIndexOf(10);
+console.log(lastIndex);
+let hasHundred=numbers.includes(100);
+console.log(hasHundred);
+
+
+
+
+
+function findElement(arr, num) {
+    // Write code here
+        if(arr.includes(num)){
+            return arr.indexOf(num);
+        }
+        else{
+            return -1;
+        }
+}
+
+
+
+function swapEnds(arr) {
+    // Write code here
+    let temp=arr[0];
+        arr[0]=arr[arr.length-1];
+        arr[arr.length-1]=temp;
+        return arr;
+}

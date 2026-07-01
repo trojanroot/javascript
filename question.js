@@ -217,3 +217,25 @@ function swapEnds(arr) {
         arr[arr.length-1]=temp;
         return arr;
 }
+
+let arr = inp.split(", "); // Don't change this line
+// Write your code below
+let result=[];
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > 5) {
+        result.push(arr[i]);
+    }
+}
+
+console.log(result);
+
+let arr = inp.split(",").map(Number); // Don't change this line
+
+// Write your code below
+let result=[];
+arr.forEach((arr)=>{
+    if(arr<50 || arr%5===0){
+        result.push(arr);
+    }
+});
+console.log(result);

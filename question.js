@@ -239,3 +239,58 @@ arr.forEach((arr)=>{
     }
 });
 console.log(result);
+
+
+// Write code here
+const transformArray=(number)=>{
+    // let filters=number.filter(num=>num<10);
+    // let mul=filters.map(num=>num*2);
+    // return mul;
+      return number
+        .filter(num => num >= 10)
+        .map(num => num * 2);
+}
+
+let ingredients = [];
+
+function addItem(item) {
+    ingredients.push(item);
+    console.log(item + " added to the grocery list.");
+}
+
+function removeItem(item) {
+    let index = ingredients.indexOf(item);
+
+    if (index !== -1) {
+        ingredients.splice(index, 1);
+        console.log(item + " removed from the grocery list.");
+    } else {
+        console.log(item + " is not in the grocery list.");
+    }
+}
+
+function viewList() {
+    if (ingredients.length === 0) {
+        console.log("The grocery list is empty.");
+    } else {
+        console.log("Grocery List:");
+        for (let i = 0; i < ingredients.length; i++) {
+            console.log((i + 1) + ". " + ingredients[i]);
+        }
+    }
+}
+
+// Test
+viewList();
+
+addItem("Milk");
+addItem("Bread");
+addItem("Eggs");
+
+viewList();
+
+removeItem("Bread");
+
+viewList();
+
+removeItem("Cheese");

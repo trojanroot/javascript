@@ -294,3 +294,36 @@ removeItem("Bread");
 viewList();
 
 removeItem("Cheese");
+
+
+
+function doubleOdds(numbers) {
+    // Write code here
+    return numbers.map(num => {
+        if (num % 2 !== 0) {
+            return num * 2;
+        }
+        return num;
+    });
+}
+
+
+function analyzeBudget(prices, items, budget) {
+    // Write code here
+    let affordableItems = [];
+    let totalCost = 0;
+    let outOfBudget = 0;
+
+    for (let i = 0; i < prices.length; i++) {
+        if (prices[i] <= budget) {
+            affordableItems.push(items[i]);
+            totalCost += prices[i];
+        } else {
+            outOfBudget++;
+        }
+    }
+
+    console.log("Affordable items:", affordableItems.join(","));
+    console.log("Total budget needed:", totalCost);
+    console.log("Items out of budget:", outOfBudget);
+}

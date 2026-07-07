@@ -327,3 +327,22 @@ function analyzeBudget(prices, items, budget) {
     console.log("Total budget needed:", totalCost);
     console.log("Items out of budget:", outOfBudget);
 }
+
+function countUniqueVowels(str) {
+    const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+    let unique = new Set();
+
+    for (const ch of str) {
+        if (vowels.includes(ch)) {
+            unique.add(ch);
+        }
+    }
+
+    return unique.size;
+}
+
+function greetAll(names) {
+  // Write your code here
+   return names.map(name => `Hello, ${name}!`).join("\n");
+}
+// Do not write anything outside function

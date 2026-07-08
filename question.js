@@ -346,3 +346,71 @@ function greetAll(names) {
    return names.map(name => `Hello, ${name}!`).join("\n");
 }
 // Do not write anything outside function
+
+
+function reverseVowels(str) {
+  const vowels = "aeiouAEIOU";
+  let vowelList = [];
+  // Collect vowels
+  for (let char of str) {
+    if (vowels.includes(char)) {
+      vowelList.push(char);
+    }
+  }
+  let result = "";
+  // Replace vowels with reversed vowels
+  for (let char of str) {
+    if (vowels.includes(char)) {
+      result += vowelList.pop();
+    } else {
+      result += char;
+    }
+  }
+  return result;
+}
+
+function alternateCase(str) {
+  // Write your code here
+    let result = "";
+
+  for (let i = 0; i < str.length; i++) {
+    if (i % 2 === 0) {
+      result += str[i].toUpperCase();
+    } else {
+      result += str[i].toLowerCase();
+    }
+  }
+
+  return result;
+}
+
+function stringWeaver(str1, str2) {
+    const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+    const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    // Write your code here
+      let clean1 = str1.replace(/[0-9]/g, "");
+  let clean2 = str2.replace(/[0-9]/g, "");
+
+  // Combine the cleaned strings
+  let combined = clean1 + clean2;
+
+  // Convert all vowels to uppercase
+  let result = combined.replace(/[aeiou]/gi, function (char) {
+    return char.toUpperCase();
+  });
+
+  return result;
+}
+// Do not write anything outside function
+
+function formatBlogTitle(title) {
+  // Write your code here
+    return title
+    .trim() // Remove whitespace from both ends
+    .toLowerCase() // Normalize text
+    .split(" ") // Split into words
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize each word
+    .join(" ") // Join words back together
+    .replace(/Javascript/gi, "JavaScript"); 
+}
+// Do not write anything outside function

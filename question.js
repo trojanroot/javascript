@@ -413,4 +413,24 @@ function formatBlogTitle(title) {
     .join(" ") // Join words back together
     .replace(/Javascript/gi, "JavaScript"); 
 }
-// Do not write anything outside function
+
+function getColumn(matrix, numberOfRows, colIndex) {
+  // TODO: Return an array containing elements from the specified column index
+   let result = [];
+
+  for (let i = 0; i < numberOfRows; i++) {
+    result.push(matrix[i][colIndex]);
+  }
+
+  return result;
+}
+
+function getElementsInRow(grid, rowIndex) {
+  // TODO: Return an array with all elements in the specified row
+  // If rowIndex is out of bounds, return an empty array
+  if (rowIndex < 0 || rowIndex >= grid.length) {
+    return [];
+  }
+
+  return grid[rowIndex];
+}

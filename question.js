@@ -434,3 +434,52 @@ function getElementsInRow(grid, rowIndex) {
 
   return grid[rowIndex];
 }
+
+function mirrorRows(matrix) {
+  // TODO: Return a new 2D array where each row is reversed.
+   return matrix.map(row => [...row].reverse());
+}
+
+function combineMatrices(matrixA, matrixB, op) {
+  // TODO: For each cell, if op is '+', add the corresponding cells.
+  // Otherwise, subtract them. Return the resulting 2D array.
+   let result = [];
+
+  for (let i = 0; i < matrixA.length; i++) {
+    let row = [];
+
+    for (let j = 0; j < matrixA[i].length; j++) {
+      if (op === "+") {
+        row.push(matrixA[i][j] + matrixB[i][j]);
+      } else if (op === "-") {
+        row.push(matrixA[i][j] - matrixB[i][j]);
+      }
+    }
+
+    result.push(row);
+  }
+
+  return result;
+}
+// Do not write anything outside function
+
+function findMaxInRows(matrix) {
+  // Your code here
+  let result = [];
+
+  for (let i = 0; i < matrix.length; i++) {
+    let max = matrix[i][0];
+
+    for (let j = 1; j < matrix[i].length; j++) {
+      if (matrix[i][j] > max) {
+        max = matrix[i][j];
+      }
+    }
+
+    result.push(max);
+  }
+
+  return result;
+}
+
+// Do not modify below this line

@@ -461,7 +461,7 @@ function combineMatrices(matrixA, matrixB, op) {
 
   return result;
 }
-// Do not write anything outside function
+
 
 function findMaxInRows(matrix) {
   // Your code here
@@ -482,4 +482,4 @@ function findMaxInRows(matrix) {
   return result;
 }
 
-// Do not modify below this line
+

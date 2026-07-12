@@ -475,7 +475,11 @@ function findMaxInRows(matrix) {
         max = matrix[i][j];
       }
     }
-
+    for (let j = 1; j < matrix[i].length; j++) {
+      if (matrix[i][j] < max) {
+        max = matrix[i][j];
+      }
+    }
     result.push(max);
   }
 

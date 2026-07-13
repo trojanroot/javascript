@@ -487,3 +487,36 @@ function findMaxInRows(matrix) {
 }
 
 
+function findMissingKeys(data, requiredKeys) {
+  let missingKeys = [];
+
+  for (let i = 0; i < requiredKeys.length; i++) {
+    if (!(requiredKeys[i] in data)) {
+      missingKeys.push(requiredKeys[i]);
+    }
+  }
+
+  return missingKeys;
+}
+function stackMatrices(matrixList) {
+  let result = [];
+
+  for (let i = 0; i < matrixList.length; i++) {
+    for (let j = 0; j < matrixList[i].length; j++) {
+      result.push(matrixList[i][j]);
+    }
+  }
+
+  return result;
+}
+function stackMatrices(matrixList) {
+  let result = [];
+
+  for (let i = 0; i < matrixList.length; i++) {
+    for (let j = 0; j < matrixList[i].length; j++) {
+      result.push(matrixList[i][j]);
+    }
+  }
+
+  return result;
+}

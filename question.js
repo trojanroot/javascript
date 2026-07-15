@@ -521,3 +521,13 @@ function findMissingKeys(data, requiredKeys) {
 
   return missingKeys;
 }
+
+function removeKeys(obj, keysToRemove) {
+  let newObj = { ...obj };
+
+  for (let i = 0; i < keysToRemove.length; i++) {
+    delete newObj[keysToRemove[i]];
+  }
+
+  return newObj;
+}

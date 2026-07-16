@@ -531,3 +531,37 @@ function removeKeys(obj, keysToRemove) {
 
   return newObj;
 }
+
+function analyzeCarData(carData) {
+    // Write code here
+     let mostExpensive = "";
+  let cheapest = "";
+  let highestPrice = -Infinity;
+  let lowestPrice = Infinity;
+  let totalPrice = 0;
+  let count = 0;
+
+  for (let car in carData) {
+    let price = carData[car];
+
+    if (price > highestPrice) {
+      highestPrice = price;
+      mostExpensive = car;
+    }
+
+    if (price < lowestPrice) {
+      lowestPrice = price;
+      cheapest = car;
+    }
+
+    totalPrice += price;
+    count++;
+  }
+
+  return {
+    mostExpensive: mostExpensive,
+    cheapest: cheapest,
+    averagePrice: totalPrice / count
+  };
+}
+// Do not write anything outside function

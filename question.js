@@ -561,7 +561,6 @@ function analyzeCarData(carData) {
   return {
     mostExpensive: mostExpensive,
     cheapest: cheapest,
-    averagePrice: totalPrice / count
   };
 }
 // Do not write anything outside function

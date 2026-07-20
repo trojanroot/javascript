@@ -565,3 +565,13 @@ function analyzeCarData(carData) {
   };
 }
 // Do not write anything outside function
+function partyPlanner(rsvps) {
+   // Write your code here
+   let uniqueSet = new Set(rsvps);
+
+  return {
+    uniqueGuests: uniqueSet.size,
+    hasDuplicates: uniqueSet.size !== rsvps.length,
+    isEmpty: uniqueSet.size === 0
+  };
+}

@@ -572,6 +572,5 @@ function partyPlanner(rsvps) {
   return {
     uniqueGuests: uniqueSet.size,
     hasDuplicates: uniqueSet.size !== rsvps.length,
-    isEmpty: uniqueSet.size === 0
   };
 }

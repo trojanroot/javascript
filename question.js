@@ -713,7 +713,7 @@ student.sort((a,b)=>b.name.localeCompare(a.name));
 console.log(student);
 
 //reduce
-const number=[3,5,6,7,8,1,3,4,5,6,7,8,9,0, 9, 2, 7, 9, 3];
+const number=[3,5,6,7,8,1,3,4,5,6,7,8,9,0,9,2,7,9,3];
 let total=0;
 for(const item of number){
   total=total+item;
@@ -725,3 +725,7 @@ const reduceTotal=number.reduce((total,item)=>{
   return total;
 },0);
 console.log(reduceTotal);
+
+const reduce=list.reduce((total,list)=>{
+  
+})

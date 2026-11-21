@@ -50,7 +50,7 @@
 // console.log(newArrr);
 
 //reduce method
-let arr=[1,2,3,4];
+let arr=[1,2,3,4]; 
 const o=arr.reduce((result,current)=>
 {
     return result+current;
